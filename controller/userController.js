@@ -5,6 +5,14 @@ const { promisify } = require('util')
 const catchAsync = require('../utillties/catchAsync.js')
 const AppError = require('../utillties/appError.js')
 
+process.env.JWTSECRET="IAM_NOT_LEAVING_NOW";
+process.env.JWT_EXPIRE_IN="90d";
+process.env.JWT_Cookie_EXPIRE_IN="90d";
+
+
+
+
+
 const TokenGenerate = id => {
     return jwt.sign({ id: id }, process.env.JWTSECRET, {
         expiresIn: process.env.JWT_EXPIRE_IN

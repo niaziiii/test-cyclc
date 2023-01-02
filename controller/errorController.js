@@ -1,4 +1,5 @@
 const AppError = require("./../utillties/appError")
+process.env.NODE_ENV="production";
 
 const setCastError = err => new AppError(`the user isnt found with ID : / ${err.value} /`, 404)
 

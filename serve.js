@@ -2,6 +2,16 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 const app = require('./app');
+
+process.env.DATABASE="mongodb+srv://mkniazi:<PASSWORD>@cluster0.dn3vzax.mongodb.net/?retryWrites=true&w=majority"
+process.env.DBPASS="oJtuoql4qwzbRmcC";
+process.env.NODE_ENV="production";
+process.env.PORT=4000;
+
+
+
+
+
 // const { tour } = require('./routes/tourRoute');
 dotenv.config({ path: `./config.env` });
 
